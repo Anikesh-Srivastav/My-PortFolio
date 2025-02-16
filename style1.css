@@ -1,0 +1,139 @@
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+ 
+}
+
+header a {
+  font-size: 3rem; 
+  color: black; 
+  text-decoration: none;
+  transition: 0.3s ease-in-out;
+}
+
+header a:hover {
+  color: #f36; 
+  transform: scale(1.2); 
+}
+
+
+html {
+  background-color: #eed;
+  font-family: 'Arial', sans-serif;
+  font-size: 70%;
+}
+
+.wrapper {
+  font-size: 1.5rem;
+  max-width: 90vw;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+}
+
+canvas {
+  background-image: url("https://assets.codepen.io/215128/snakesAndLaddersBoard.jpg");
+  border: 5px solid grey;
+  border-radius: 7px;
+  width: 100%;
+  height: auto;
+  max-width: 500px;
+  max-height: 500px;
+}
+
+
+.playerYou .wrapper {
+  color: #8a0022;
+}
+.playerYou canvas {
+  border-color: #f36;
+}
+.playerYou #diceThrow {
+  background-color: #f361;
+  background-blend-mode: multiply;
+  border-color: #d60036;
+}
+
+.playerAutoBot .wrapper {
+  color: #3a480e;
+}
+.playerAutoBot canvas {
+  border-color: #8a2;
+}
+.playerAutoBot #diceThrow {
+  background-color: #8a22;
+  background-blend-mode: multiply;
+  border-color: #556a15;
+}
+
+
+#diceThrow {
+  background-image: url("https://assets.codepen.io/215128/diceSpots.png");
+  background-size: 50px;
+  border: 2px solid black;
+  border-radius: 7px;
+  cursor: pointer;
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+}
+
+
+@keyframes shake {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(-10deg); }
+  50% { transform: rotate(10deg); }
+  75% { transform: rotate(-10deg); }
+  100% { transform: rotate(0deg); }
+}
+#diceThrow:active {
+  animation: shake 0.3s ease-in-out;
+}
+
+
+#diceThrow.s6 { background-position: 0 0; }
+#diceThrow.s5 { background-position: 0 -50px; }
+#diceThrow.s4 { background-position: 0 -100px; }
+#diceThrow.s3 { background-position: 0 -150px; }
+#diceThrow.s2 { background-position: 0 -200px; }
+#diceThrow.s1 { background-position: 0 -250px; }
+
+
+.buttonWrapper {
+  display: flex;
+  margin: 15px 15px;
+}
+button {
+  border-radius: 7px;
+  margin-left: 100px;
+  padding: 10px 30px;
+  background-color: #444;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+
+button:hover {
+  background-color: #555;
+  transform: scale(1.1);
+}
+
+
+.hidden {
+  display: none;
+}
+
+h1 {
+  margin-bottom: 5px;
+}
+
+h2 {
+  margin-top: 0;
+}
+
